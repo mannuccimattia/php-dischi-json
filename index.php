@@ -9,49 +9,60 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="mt-5">
+  <div class="container-fluid bg-darker">
+    <div class="navbar container my-5">
+      <div class="img-wrapper">
+        <img src="./imgs/logo.png" class="img-fluid" alt="logo">
+      </div>
       <h1>My collection</h1>
+    </div>
+  </div>
 
-      <div class="row gy-4 mb-5">
+  <div class="container">
+    <div class="row gy-4 mb-5">
 
-        <?php
+      <?php
 
-        foreach ($vinyls as $vinyl) {
+      foreach ($vinyls as $vinyl) {
 
-        ?>
+      ?>
 
-          <div class="col-12">
-            <div class="card bg-dark flex-row text-white align-items-center">
-              <div class="card-img">
-                <img
-                  src="<?php echo $vinyl['img_url'] ?>"
-                  class="img-fluid rounded-start"
-                  alt="album cover">
+        <div class="col-12 col-lg-6">
+          <div class="card bg-dark flex-row text-white align-items-center">
+            <div class="card-img">
+              <img
+                src="<?php echo $vinyl['img_url'] ?>"
+                class="img-fluid rounded-start"
+                alt="album cover">
+            </div>
+            <div class="card-body ps-4">
+              <div class="card-title">
+                <h5 class="fw-bold">
+                  <?php echo $vinyl['title'] ?>
+                </h5>
+                <div class="text-secondary">
+                  <?php echo $vinyl['artist'] ?>
+                </div>
               </div>
-              <div class="card-body ps-4">
-                <div class="card-title">
-                  <b>Title:</b> <?php echo $vinyl['title'] ?>
+              <div class="card-text text-secondary">
+                <div>
+                  <em> <?php echo $vinyl['year'] ?> </em>
                 </div>
-                <div class="card-title">
-                  <b>Artist:</b> <?php echo $vinyl['artist'] ?>
-                </div>
-                <div class="card-title">
-                  <b>Genre:</b> <?php echo $vinyl['genre'] ?>
+                <div>
+                  <?php echo $vinyl['genre'] ?>
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
-        <?php
+      <?php
 
-        }
+      }
 
-        ?>
+      ?>
 
-      </div>
     </div>
-
   </div>
 </body>
 

@@ -3,7 +3,12 @@ body {
   color: #fff;
 }
 
+.img-wrapper,
 .card-img {
   max-width: 200px;
   aspect-ratio: 1/1;
+}
+
+.bg-darker {
+  background-color: #121222;
 }
