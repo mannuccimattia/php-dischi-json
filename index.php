@@ -1,11 +1,4 @@
-<?php
-
-$vinyls_text = file_get_contents("./vinyls_list.json");
-
-$vinyls = json_decode($vinyls_text);
-var_dump($vinyls);
-
-?>
+<?php require_once "./server.php" ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,6 +12,18 @@ var_dump($vinyls);
   <div class="container">
     <div class="mt-5">
       <h1>My collection</h1>
+
+      <ul>
+
+        <?php
+
+        foreach ($vinyls as $vinyl) {
+          echo "<li>$vinyl</li>";
+        }
+
+        ?>
+
+      </ul>
     </div>
 
   </div>
