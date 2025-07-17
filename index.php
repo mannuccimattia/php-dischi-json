@@ -10,12 +10,17 @@
 
 <body>
   <div class="container-fluid bg-darker">
-    <div class="navbar container my-5">
+    <div class="navbar container">
       <div class="img-wrapper">
         <img src="./imgs/logo.png" class="img-fluid" alt="logo">
       </div>
       <h1>My collection</h1>
     </div>
+  </div>
+  <div class="text-center bg-secondary mb-5 py-2">
+    <a href="./add_vinyl.php" id="new-vinyl-link" class="text-white nav-link">
+      👉 <b>Add a new vinyl</b> 👈
+    </a>
   </div>
 
   <div class="container">
