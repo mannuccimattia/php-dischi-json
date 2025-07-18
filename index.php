@@ -37,7 +37,7 @@
             <div class="card-img">
               <img
                 src="<?php echo $vinyl['img_url'] ?>"
-                class="img-fluid rounded-start"
+                class="h-100 img-fluid rounded-start"
                 alt="album cover">
             </div>
             <div class="card-body ps-4">
