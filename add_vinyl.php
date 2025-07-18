@@ -1,3 +1,9 @@
+<?php
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,27 +24,47 @@
 
   <div class="container">
 
-    <form action="" method="" class=" bg-dark rounded p-3">
+    <form action="./server.php" method="POST" class="bg-dark rounded p-3">
       <div class="row">
         <div class="col-12 col-lg-6 mb-4">
           <label for="vinyl-title" class="form-label"> Insert title</label>
-          <input type="text" id="vinyl-title" class="form-control bg-dark border-secondary text-white">
+          <input
+            type="text"
+            name="vinylTitle"
+            id="vinyl-title"
+            class="form-control bg-dark border-secondary text-white">
         </div>
         <div class="col-12 col-lg-6 mb-4">
           <label for="vinyl-artist" class="form-label"> Insert artist</label>
-          <input type="text" id="vinyl-artist" class="form-control bg-dark border-secondary text-white">
+          <input
+            type="text"
+            name="vinylArtist"
+            id="vinyl-artist"
+            class="form-control bg-dark border-secondary text-white">
         </div>
         <div class="col-12 col-lg-6 mb-4">
           <label for="vinyl-year" class="form-label"> Insert year</label>
-          <input type="text" id="vinyl-year" class="form-control bg-dark border-secondary text-white">
+          <input
+            type="text"
+            name="vinylYear"
+            id="vinyl-year"
+            class="form-control bg-dark border-secondary text-white">
         </div>
         <div class="col-12 col-lg-6 mb-4">
           <label for="vinyl-genre" class="form-label"> Insert genre</label>
-          <input type="text" id="vinyl-genre" class="form-control bg-dark border-secondary text-white">
+          <input
+            type="text"
+            name="vinylGenre"
+            id="vinyl-genre"
+            class="form-control bg-dark border-secondary text-white">
         </div>
         <div class="col-12 col-lg-6 mb-4 mx-auto">
           <label for="vinyl-img-url" class="form-label"> Insert image url</label>
-          <input type="text" id="vinyl-img-url" class="form-control bg-dark border-secondary text-white">
+          <input
+            type="file"
+            name="vinylURL"
+            id="vinyl-img-url"
+            class="form-control bg-dark border-secondary text-white styled-file-input">
         </div>
         <div class="mb-4 text-center">
           <button type="submit" class="btn btn-primary btn-large">Add</button>

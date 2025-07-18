@@ -2,42 +2,42 @@
   {
     "title": "Fever to Tell",
     "artist": "Yeah Yeah Yeahs",
-    "img_url": "./imgs/yeah-yeah-yeahs-fever-to-tell.jpg",
+    "img_url": ".\/imgs\/yeah-yeah-yeahs-fever-to-tell.jpg",
     "year": 2003,
     "genre": "Indie Rock"
   },
   {
     "title": "Cosmo's Factory",
     "artist": "Creedence Clearwater Revival",
-    "img_url": "./imgs/creedence-clearwater-revival-cosmos-factory.jpg",
+    "img_url": ".\/imgs\/creedence-clearwater-revival-cosmos-factory.jpg",
     "year": 1970,
     "genre": "Classic Rock"
   },
   {
     "title": "MM..Food",
     "artist": "MF DOOM",
-    "img_url": "./imgs/mf-doom-mm-food.jpg",
+    "img_url": ".\/imgs\/mf-doom-mm-food.jpg",
     "year": 2004,
     "genre": "Hip Hop"
   },
   {
     "title": "Non-Stop Erotic Cabaret",
     "artist": "Soft Cell",
-    "img_url": "./imgs/soft-cell-non-stop-erotic-cabaret.jpg",
+    "img_url": ".\/imgs\/soft-cell-non-stop-erotic-cabaret.jpg",
     "year": 1981,
     "genre": "New Wave"
   },
   {
     "title": "Alicia",
     "artist": "Alicia Keys",
-    "img_url": "./imgs/alicia-keys-alicia.jpg",
+    "img_url": ".\/imgs\/alicia-keys-alicia.jpg",
     "year": 2020,
     "genre": "Rythm & Blues"
   },
   {
     "title": "Black Metal",
     "artist": "Venom",
-    "img_url": "./imgs/venom-black-metal.jpg",
+    "img_url": ".\/imgs\/venom-black-metal.jpg",
     "year": 1982,
     "genre": "Black Metal"
   }

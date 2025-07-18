@@ -20,3 +20,16 @@ body {
 .btn {
   width: 100px;
 }
+
+.btn-primary {
+  background-color: #121222;
+}
+
+.btn-danger {
+  background-color: rgb(90, 44, 44);
+}
+
+.styled-file-input::file-selector-button {
+  background-color: #121222;
+  color: white;
+}
