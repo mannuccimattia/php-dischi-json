@@ -1,7 +1,5 @@
 <?php
 
-var_dump($_POST);
-
 // retrieve json list as string
 $json_text = file_get_contents("./vinyls_list.json");
 
@@ -12,15 +10,22 @@ $vinyls = json_decode($json_text);
 $vinyls[] = [
   "title" => $_POST['vinylTitle'],
   "artist" => $_POST['vinylArtist'],
-  "img-url" => "./imgs/$_POST[vinylURL]",
+  "img_url" => "./imgs/" . $_FILES['vinylURL']['full_path'],
   "year" => $_POST['vinylYear'],
   "genre" => $_POST['vinylGenre']
 ];
 
+// save loaded image into ~/imgs/ folder
+$image_file = $_FILES['vinylURL']['tmp_name'];
+$image_destination = "./imgs/" . $_FILES['vinylURL']['name'];
+
+move_uploaded_file($image_file, $image_destination);
+
 // encode php array into json string
 $json_text_updated = json_encode($vinyls);
 
-var_dump($vinyls);
-
 // overwrite .json file with lew list
-// file_put_contents("./vinyls_list.json", $json_text_updated);
+file_put_contents("./vinyls_list.json", $json_text_updated);
+
+// redirect user to index.php
+header("Location: ./index.php");

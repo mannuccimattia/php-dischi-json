@@ -24,7 +24,7 @@
 
   <div class="container">
 
-    <form action="./server.php" method="POST" class="bg-dark rounded p-3">
+    <form action="./server.php" method="POST" enctype="multipart/form-data" class="bg-dark rounded p-3">
       <div class="row">
         <div class="col-12 col-lg-6 mb-4">
           <label for="vinyl-title" class="form-label"> Insert title</label>
