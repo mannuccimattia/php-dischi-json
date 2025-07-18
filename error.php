@@ -22,7 +22,7 @@
       <div class="col-12 text-center my-5">
         <h3>Something went wrong while submitting the form</h3>
         <p class="mt-5">Please try again</p>
-        <a href="./index.php" class="btn btn-danger">Back</a>
+        <a href="./add_vinyl.php" class="btn btn-danger">Back</a>
       </div>
 
     </div>

@@ -1,18 +1,19 @@
 <?php
 
+// if $form contains empty fields or file update has errors, redirect to error.php and stop  
 if (
   $_POST['vinylTitle'] === ""
-  && $_POST['vinylTitle'] === ""
-  && $_FILES['vinylURL']['error'] !== 0
-  && $_POST['vinylYear'] === ""
-  && $_POST['vinylGenre'] === ""
+  || $_POST['vinylTitle'] === ""
+  || $_FILES['vinylURL']['error'] !== 0
+  || $_POST['vinylYear'] === ""
+  || $_POST['vinylGenre'] === ""
 ) {
 
   header("Location: ./error.php");
 
   return;
 } else {
-  echo "else";
+
   // retrieve json list as string
   $json_text = file_get_contents("./vinyls_list.json");
 
