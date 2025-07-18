@@ -32,6 +32,7 @@
             type="text"
             name="vinylTitle"
             id="vinyl-title"
+            required
             class="form-control bg-dark border-secondary text-white">
         </div>
         <div class="col-12 col-lg-6 mb-4">
@@ -40,6 +41,7 @@
             type="text"
             name="vinylArtist"
             id="vinyl-artist"
+            required
             class="form-control bg-dark border-secondary text-white">
         </div>
         <div class="col-12 col-lg-6 mb-4">
@@ -48,6 +50,7 @@
             type="text"
             name="vinylYear"
             id="vinyl-year"
+            required
             class="form-control bg-dark border-secondary text-white">
         </div>
         <div class="col-12 col-lg-6 mb-4">
@@ -56,6 +59,7 @@
             type="text"
             name="vinylGenre"
             id="vinyl-genre"
+            required
             class="form-control bg-dark border-secondary text-white">
         </div>
         <div class="col-12 col-lg-6 mb-4 mx-auto">
@@ -64,6 +68,7 @@
             type="file"
             name="vinylURL"
             id="vinyl-img-url"
+            required
             class="form-control bg-dark border-secondary text-white styled-file-input">
         </div>
         <div class="mb-4 text-center">

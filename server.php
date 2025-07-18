@@ -1,31 +1,45 @@
 <?php
 
-// retrieve json list as string
-$json_text = file_get_contents("./vinyls_list.json");
+if (
+  $_POST['vinylTitle'] === ""
+  && $_POST['vinylTitle'] === ""
+  && $_FILES['vinylURL']['error'] !== 0
+  && $_POST['vinylYear'] === ""
+  && $_POST['vinylGenre'] === ""
+) {
 
-// decode json string into php array
-$vinyls = json_decode($json_text);
+  header("Location: ./error.php");
 
-// add new vinyl to php array
-$vinyls[] = [
-  "title" => $_POST['vinylTitle'],
-  "artist" => $_POST['vinylArtist'],
-  "img_url" => "./imgs/" . $_FILES['vinylURL']['full_path'],
-  "year" => $_POST['vinylYear'],
-  "genre" => $_POST['vinylGenre']
-];
+  return;
+} else {
+  echo "else";
+  // retrieve json list as string
+  $json_text = file_get_contents("./vinyls_list.json");
 
-// save loaded image into ~/imgs/ folder
-$image_file = $_FILES['vinylURL']['tmp_name'];
-$image_destination = "./imgs/" . $_FILES['vinylURL']['name'];
+  // decode json string into php array
+  $vinyls = json_decode($json_text);
 
-move_uploaded_file($image_file, $image_destination);
+  // add new vinyl to php array
+  $vinyls[] = [
+    "title" => $_POST['vinylTitle'],
+    "artist" => $_POST['vinylArtist'],
+    "img_url" => "./imgs/" . $_FILES['vinylURL']['full_path'],
+    "year" => $_POST['vinylYear'],
+    "genre" => $_POST['vinylGenre']
+  ];
 
-// encode php array into json string
-$json_text_updated = json_encode($vinyls);
+  // save loaded image into ~/imgs/ folder
+  $image_file = $_FILES['vinylURL']['tmp_name'];
+  $image_destination = "./imgs/" . $_FILES['vinylURL']['name'];
 
-// overwrite .json file with lew list
-file_put_contents("./vinyls_list.json", $json_text_updated);
+  move_uploaded_file($image_file, $image_destination);
 
-// redirect user to index.php
-header("Location: ./index.php");
+  // encode php array into json string
+  $json_text_updated = json_encode($vinyls);
+
+  // overwrite .json file with lew list
+  file_put_contents("./vinyls_list.json", $json_text_updated);
+
+  // redirect user to index.php
+  header("Location: ./index.php");
+}
